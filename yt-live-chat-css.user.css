@@ -1,0 +1,35 @@
+/* ==UserStyle==
+@name           YouTube Live Chat UI
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Tweaks to YouTube Live Chat UI
+@author         nattofriends
+@homepageURL    https://github.com/nattofriends/yt-live-chat-css
+@updateURL      https://raw.githubusercontent.com/nattofriends/yt-live-chat-css/master/yt-live-chat-css.user.css
+
+@var color highlight-color "Highlight Color" yellow
+
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+    /* Required for position:sticky to work, see https://uxdesign.cc/position-stuck-96c9f55d9526 */
+    #item-offset.yt-live-chat-item-list-renderer {
+        overflow: visible !important;
+    }
+
+    /* The new message scrolling animation needs to be disabled otherwise the sticky message becomes jumpy */
+    #items.yt-live-chat-item-list-renderer {
+        transform: none !important;
+    }
+
+    /* This isn't as elegant as using YouTube's stickiness renderer (sticky elements will stack, for example)
+     * but it's probably more performant
+     */
+    yt-live-chat-text-message-renderer[author-type="moderator"],
+    yt-live-chat-text-message-renderer[author-type="owner"] {
+        background: var(--highlight-color);
+
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
