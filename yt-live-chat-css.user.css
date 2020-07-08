@@ -7,7 +7,10 @@
 @homepageURL    https://github.com/nattofriends/yt-live-chat-css
 @updateURL      https://raw.githubusercontent.com/nattofriends/yt-live-chat-css/master/yt-live-chat-css.user.css
 
-@var color highlight-color "Highlight Color" yellow
+@preprocessor   less
+
+@var color highlight-color "Background Highlight Color" yellow
+@var color text-color "Color" black
 
 ==/UserStyle== */
 @-moz-document domain("youtube.com") {
@@ -26,8 +29,12 @@
      */
     yt-live-chat-text-message-renderer[author-type="moderator"],
     yt-live-chat-text-message-renderer[author-type="owner"] {
-        background: var(--highlight-color);
-
+        background: @highlight-color;
+        
+        #message {
+            color: @text-color;
+        }
+        
         position: sticky;
         top: 0;
         z-index: 1;
