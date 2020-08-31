@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube Live Chat UI
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.1
 @description    Tweaks to YouTube Live Chat UI
 @author         nattofriends
 @homepageURL    https://github.com/nattofriends/yt-live-chat-css
@@ -11,7 +11,7 @@
 @var color text-color "Color" black
 
 ==/UserStyle== */
-@-moz-document domain("youtube.com") {
+@-moz-document regexp(".*youtube.com/watch.*") {
     /* Required for position:sticky to work, see https://uxdesign.cc/position-stuck-96c9f55d9526 */
     #item-offset.yt-live-chat-item-list-renderer {
         overflow: visible !important;
