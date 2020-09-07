@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           YouTube Live Chat UI
 @namespace      github.com/openstyles/stylus
-@version        1.0.2
+@version        1.0.3
 @description    Tweaks to YouTube Live Chat UI
 @author         nattofriends
-@homepageURL    https://github.com/nattofriends/yt-live-chat-css
-@updateURL      https://raw.githubusercontent.com/nattofriends/yt-live-chat-css/master/yt-live-chat-css.user.css
+@homepageURL    https://github.com/nattofriends/youtube-tweaks
+@updateURL      https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-live-chat-css.user.css
 
 @var color highlight-color "Background Highlight Color" yellow
 @var color text-color "Color" black
