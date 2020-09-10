@@ -13,3 +13,13 @@ function errorWrapper(name) {
     }
   }
 }
+
+function logger(name) {
+    return function log(message) {
+    if (typeof message === 'string') {
+      console.log(`${name}: ${message}`);
+    } else {
+      console.log(name, message);
+    }
+  }
+}
