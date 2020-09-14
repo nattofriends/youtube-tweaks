@@ -23,3 +23,23 @@ function logger(name) {
     }
   }
 }
+
+// XXX: Use querySelectorAll instead?
+function waitForElement(selector, callback, targetDocument) {
+  targetDocument ||= document;
+
+  // Only start observing if we didn't find anything the first time.
+  let el = targetDocument.querySelector(selector);
+  if (el !== null) {
+    callback(el)
+  } else {
+    log(`No element found for ${selector}, starting observer`);
+    const observer = new MutationObserver(() => {
+      let el = targetDocument.querySelector(selector);
+      if (el != null) {
+        callback(el);
+      }
+    });
+    observer.observe(targetDocument.documentElement, {attributes: false, childList: true, subtree: true})
+  }
+}
