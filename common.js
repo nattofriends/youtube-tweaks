@@ -33,7 +33,6 @@ function waitForElement(selector, callback, targetDocument) {
   if (el !== null) {
     callback(el)
   } else {
-    log(`No element found for ${selector}, starting observer`);
     const observer = new MutationObserver(() => {
       let el = targetDocument.querySelector(selector);
       if (el != null) {
