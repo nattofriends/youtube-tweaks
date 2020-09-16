@@ -25,8 +25,9 @@ function logger(name) {
 }
 
 // XXX: Use querySelectorAll instead?
-function waitForElement(selector, callback, targetDocument) {
+function waitForElement(selector, callback, targetDocument, oneShot) {
   targetDocument ||= document;
+  oneShot = oneShot === undefined ? false : oneShot;
 
   // Only start observing if we didn't find anything the first time.
   let el = targetDocument.querySelector(selector);
@@ -37,6 +38,9 @@ function waitForElement(selector, callback, targetDocument) {
       let el = targetDocument.querySelector(selector);
       if (el != null) {
         callback(el);
+      }
+      if (oneShot === true) {
+        observer.disconnect();
       }
     });
     observer.observe(targetDocument.documentElement, {attributes: false, childList: true, subtree: true})
