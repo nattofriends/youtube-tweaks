@@ -85,13 +85,8 @@
 
       player.setOption('captions', 'track', newValue);
     }));
-    
-    // Initial invocation. Now begin listening for navigation events
-    if (event === undefined) {
-      window.addEventListener('yt-navigate-finish', main);
-    }
   });
 
-  // Initial page load
   main();
+  window.addEventListener('yt-navigate-finish', main);
 })();
