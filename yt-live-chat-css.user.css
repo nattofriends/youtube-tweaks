@@ -1,9 +1,10 @@
 /* ==UserStyle==
 @name           YouTube Live Chat UI
 @namespace      github.com/openstyles/stylus
-@version        1.0.3
+@version        1.0.4
 @description    Tweaks to YouTube Live Chat UI
 @author         nattofriends
+@preprocessor   less
 @homepageURL    https://github.com/nattofriends/youtube-tweaks
 @updateURL      https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-live-chat-css.user.css
 
@@ -27,16 +28,15 @@
      */
     yt-live-chat-text-message-renderer[author-type="moderator"],
     yt-live-chat-text-message-renderer[author-type="owner"] {
-        background: var(--highlight-color);
+        background: @highlight-color;
 
         position: sticky;
         top: 0;
         z-index: 1;
-    }
     
-    /* Force the text color because dark mode users will have white text */
-    yt-live-chat-text-message-renderer[author-type="moderator"] #message,
-    yt-live-chat-text-message-renderer[author-type="owner"] #message {
-        color: var(--text-color);
+        /* Force the text color because dark mode users will have white text */
+        #message, #timestamp {
+            color: @text-color;
+        }
     }
 }
