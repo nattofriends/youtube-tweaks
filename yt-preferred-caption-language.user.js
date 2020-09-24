@@ -14,7 +14,7 @@
 // @noframes    Otherwise the menu option will run for both the main window and the chat frame.
 // @require     https://raw.githubusercontent.com/nattofriends/youtube-tweaks/common-5/common.js
 // @run-at      document-idle
-// @version     1.0
+// @version     1.1
 // ==/UserScript==
 
 (() => {
