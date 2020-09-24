@@ -53,6 +53,15 @@
   }
 
   let main = wrap((event) => {
+    // We explicitly call main() in addition to listening for yt-navigate-finish events,
+    // because sometimes this code will run after that event is fired for the initial page
+    // load.
+    // Ignore the event if that is the case.
+    if (event !== undefined && event.target.numNavigations_ == 0) {
+      log('Ignoring navigation event when numNavigations is 0');
+      return
+    }
+    
     // Embeds seem to not have the captions functions (toggleSubtitles())
     // and the caption tracklist seems to be undefined if we ask at this point,
     // so skip embeds.
