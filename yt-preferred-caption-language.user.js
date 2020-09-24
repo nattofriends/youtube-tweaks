@@ -59,7 +59,7 @@
     // Ignore the event if that is the case.
     if (event !== undefined && event.target.numNavigations_ == 0) {
       log('Ignoring navigation event when numNavigations is 0');
-      return
+      return;
     }
     
     // Embeds seem to not have the captions functions (toggleSubtitles())
