@@ -24,3 +24,8 @@ Amplify videos to equal loudness using the peak loudness value from YouTube. NOT
 Set a video to play back in only the left or right channels.
 
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-channel-balance.user.js)
+
+## Aggressive Chat Reader
+Force YouTube Live Chat to poll for new messages every second, instead of the default 5 seconds.
+
+[Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-aggressive-chat-reader.user.js)
