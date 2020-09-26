@@ -14,3 +14,8 @@ Select captions only from a list of preferred languages, otherwise disable them.
 Lower the volume of premiering videos, and restore the volume when the countdown finishes. Does not account for playback rate changes.
 
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-premiere-eardrum-saver.user.js)
+
+## Loudness Correction
+Amplify videos to equal loudness using the peak loudness value from YouTube. NOT recommended for use in Firefox.
+
+[Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-loudness-correction.user.js)
