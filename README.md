@@ -35,3 +35,8 @@ Highlight and sticky live chat comments from moderators and owners.
 Force YouTube Live Chat to poll for new messages every second, instead of the default 5 seconds.
 
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-aggressive-chat-reader.user.js)
+
+### Chat Add Info
+Add seconds to live chat timestamps, and add a link to message authors' channels.
+
+[Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-chat-add-info.user.js)
