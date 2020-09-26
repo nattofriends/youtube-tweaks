@@ -1,5 +1,7 @@
 # youtube-tweaks
 
+Tested with [Stylus](https://add0n.com/stylus.html) for UserCSS and [Violentmonkey](https://violentmonkey.github.io/) for userscripts.
+
 ## Audio
 
 ### Premiere Eardrum Saver
