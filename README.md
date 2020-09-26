@@ -19,3 +19,8 @@ Lower the volume of premiering videos, and restore the volume when the countdown
 Amplify videos to equal loudness using the peak loudness value from YouTube. NOT recommended for use in Firefox.
 
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-loudness-correction.user.js)
+
+## Channel Balance
+Set a video to play back in only the left or right channels.
+
+[Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-channel-balance.user.js)
