@@ -40,3 +40,8 @@ Force YouTube Live Chat to poll for new messages every second, instead of the de
 Add seconds to live chat timestamps, and add a link to message authors' channels.
 
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-chat-add-info.user.js)
+
+### Force Columns
+Add menu items to force single- or double-column mode regardless of viewport width, useful for forcing live chat below the video.
+
+[Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-force-columns.user.js)
