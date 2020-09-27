@@ -10,7 +10,7 @@ Lower the volume of premiering videos, and restore the volume when the countdown
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-premiere-eardrum-saver.user.js)
 
 ### Loudness Correction
-Amplify videos to equal loudness using the peak loudness value from YouTube. NOT recommended for use in Firefox.
+Amplify videos to equal loudness using the peak loudness value from YouTube. Not recommended for use in Firefox until [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1517199) is fixed.
 
 [Install UserScript](https://raw.githubusercontent.com/nattofriends/youtube-tweaks/master/yt-loudness-correction.user.js)
 
