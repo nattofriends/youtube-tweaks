@@ -11,7 +11,7 @@
 // @grant       GM_notification
 // @require     https://raw.githubusercontent.com/nattofriends/youtube-tweaks/common-5/common.js
 // @run-at      document-idle
-// @version     1.
+// @version     1.1
 // ==/UserScript==
 
 (() => {
