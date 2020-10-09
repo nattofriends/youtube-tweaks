@@ -11,7 +11,7 @@
 // @grant       GM_notification
 // @require     https://raw.githubusercontent.com/nattofriends/youtube-tweaks/common-5/common.js
 // @run-at      document-idle
-// @version     1.0
+// @version     1.
 // ==/UserScript==
 
 (() => {
@@ -90,7 +90,22 @@
       } else if (playerResponse.videoDetails.isLive === true && playerResponse.videoDetails.isLiveContent === false) {
         log('Found currently premiering video');
 
+        // Wait for video to actually begin playing before getting playback time
+        if (player.getPlayerState() !== playerStatePlaying) {
+          log('Waiting for player to start');
+          let onStateChange = (event) => {
+            if (event === playerStatePlaying) {
+              log('Player now playing, continuing in-progress configuration');
+              player.removeEventListener('onStateChange', onStateChange);
+              main();
+            }
+          };
+          player.addEventListener('onStateChange', onStateChange);
+          return;
+        }
+
         let currentTime = player.getCurrentTime() * 1000;
+        log(`Current time is ${currentTime}`);
         if (currentTime > twoMinutesMillis) {
           log('Past premiere countdown, doing nothing');
           return;
@@ -130,7 +145,7 @@
     
     lastTimeoutCallback = setTimeout(
       () => {
-        log(`Setting volume to ${originalVolume}`);
+        log(`Setting volume to ${originalVolume} (current player time: ${player.getCurrentTime()})`);
         player.setVolume(originalVolume);
       },
       timeout,
