@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube Live Chat UI
 @namespace      github.com/openstyles/stylus
-@version        1.0.4
+@version        1.0.5
 @description    Tweaks to YouTube Live Chat UI
 @author         nattofriends
 @preprocessor   less
@@ -12,6 +12,7 @@
 @var color text-color "Color" black
 
 ==/UserStyle== */
+
 @-moz-document regexp(".*youtube.com/live_chat.*") {
     /* Required for position:sticky to work, see https://uxdesign.cc/position-stuck-96c9f55d9526 */
     #item-offset.yt-live-chat-item-list-renderer {
@@ -26,17 +27,19 @@
     /* This isn't as elegant as using YouTube's stickiness renderer (sticky elements will stack, for example)
      * but it's probably more performant
      */
-    yt-live-chat-text-message-renderer[author-type="moderator"],
-    yt-live-chat-text-message-renderer[author-type="owner"] {
-        background: @highlight-color;
+    #items {
+        yt-live-chat-text-message-renderer[author-type="moderator"],
+        yt-live-chat-text-message-renderer[author-type="owner"] {
+            background: @highlight-color;
 
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    
-        /* Force the text color because dark mode users will have white text */
-        #message, #timestamp {
-            color: @text-color;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+
+            /* Force the text color because dark mode users will have white text */
+            #message, #timestamp {
+                color: @text-color;
+            }
         }
     }
 }
